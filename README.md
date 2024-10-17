@@ -14,7 +14,7 @@ import torch.nn as nn
 f = nn.Linear(2,1)
 ```
 `f` will implement a map $f: \mathbb{R}^2 \to \mathbb{R}, \mathbf{x} \mapsto \langle \mathbf{w},\mathbf{x}\rangle + b$, where $\mathbf{w} \in \mathbb{R}^2$ and $b \in \mathbb{R}$, i.e., an *affine map*.  $\mathbf{w}$ and $b$ are the parameters of this function. You can access $\mathbb{w}$ via 
-`f.weights` and $b$ via `f.bias`. The question now is what values you need to use in $\mathbb{w}$ and $b$ such that for inputs $\mathbf{x}_1 = [0,0]^\top$,$\mathbf{x}_2 = [0,1]^\top$,$\mathbf{x}_3 = [1,0]^\top$,$\mathbf{x}_4 = [1,1]^\top$ the correct output for the **AND** gate is returned. Implement this functionality in a way so you can use `return (f(x)>0).int()` as a final return 
+`f.weight` and $b$ via `f.bias`. The question now is what values you need to use in $\mathbb{w}$ and $b$ such that for inputs $\mathbf{x}_1 = [0,0]^\top$, $\mathbf{x}_2 = [0,1]^\top$, $\mathbf{x}_3 = [1,0]^\top$, $\mathbf{x}_4 = [1,1]^\top$ the correct output for the **AND** gate is returned. Implement this functionality in a way so you can use `return (f(x)>0).int()` as a final return 
 statement.
 
 ### Exercise 2.2
