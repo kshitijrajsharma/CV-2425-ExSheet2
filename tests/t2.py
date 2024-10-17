@@ -17,3 +17,5 @@ def test_2(assignment_ex2, env):
     T = torch.load('assets/ex2_T.pt', weights_only=False)
     assert (T == out).all(), "Output values for OR gate differ from expected values!"
     
+    
+    
