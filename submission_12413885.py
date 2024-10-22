@@ -15,7 +15,7 @@ class Gate(nn.Module):
     def __init__(self, weight, bias):
         super().__init__()  ## force nn.module init
         self.f = nn.Linear(2, 1)
-        with torch.no_grad():
+        with torch.no_grad():  # using grad because we want directly weight assigned instead of learning
             self.f.weight = nn.Parameter(torch.tensor([weight]))
             self.f.bias = nn.Parameter(torch.tensor([bias]))
 
